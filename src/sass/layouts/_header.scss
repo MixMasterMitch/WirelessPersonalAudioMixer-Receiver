@@ -1,0 +1,53 @@
+@import '../common/import';
+
+#header {
+  background-color: $orange;
+
+  .container {
+    h1 {
+      color: $white;
+      margin-bottom: 0;
+      font-weight: 100;
+    }
+
+    .receiverName {
+      font-size: 14px;
+      font-weight: 300;
+      color: white;
+      margin-left: 20px;
+
+      .name {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+      }
+
+      .editingName {
+        height: 40px;
+
+        input {
+          width: 200px;
+          line-height: 40px;
+          background: orange;
+          background: none;
+          border: none;
+          padding: 0;
+          margin: 0;
+          outline: none;
+          border-bottom: 1px solid white;
+          height: 31px;
+        }
+
+        .saveButton {
+          font-size: 14px;
+          position: relative;
+          top: 2px;
+          left: 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.audioChannelHeader {
+  display: table;
+  text-align: left;
+  float: left;
+
+  > * {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+  .title {
+    width: 325px;
+    padding-left: 12px;
+    height: 40px;
+  }
+  .clientHeader {
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    height: 40px;
+    font-size: 10px
+  }
+}
+
+.audioChannelDetails {
+  display: inline-block;
+  width: 325px;
+  height: 100%;
+  vertical-align: top;
+  padding: 6px 12px;
+  position: relative;
+
+  .removeButton {
+    top: 6px;
+    display: none;
+    position: absolute;
+    right: 6px;
+  }
+
+  .soloButton,
+  .muteButton {
+    display: inline-block;
+    margin-left: 4px;
+    position: relative;
+    top: 3px;
+  }
+
+  .glyphicon {
+    cursor: pointer;
+
+    &.active {
+      color: $orange;
+    }
+  }
+
+  .audioChannelName {
+    font-size: 28px;
+    font-weight: 300;
+
+    .name {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    input {
+      width: 250px;
+      line-height: 24px;
+      margin-left: -3px;
+    }
+
+    .saveButton {
+      font-size: 14px;
+      position: relative;
+      top: -2px;
+      left: 4px;
+    }
+  }
+
+  .latency {
+    font-size: 10px;
+    margin-top: 3px;
+    font-style: italic;
+  }
+}
+.gain {
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+
+  .sliderWrapper {
+    padding: 12px 0px;
+
+    &[enabled="false"] {
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    .slider {
+      width: 8px;
+      height: 80px;
+
+      .slider-selection {
+        width: 8px;
+        background: rgb(230, 230, 230);
+        box-shadow: 0 0 4px rgba(0,0,0,.2) inset;
+      }
+
+      .slider-track {
+        width: 8px;
+        background: $orange;
+        box-shadow: 0 0 4px rgba(0,0,0,.2) inset;
+      }
+
+      .slider-handle {
+        background: $orange;
+        margin-left: -4px;
+        width: 16px;
+        height: 16px;
+        opacity: 1;
+        box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+      }
+    }
+  }
+}
+
+.audioChannel {
+  height: 100px;
+  border-top: 1px solid rgb(230, 230, 230);
+
+  &:hover {
+    background: rgb(250,250,250);
+
+    .removeButton {
+      display: block;
+    }
+  }
+}

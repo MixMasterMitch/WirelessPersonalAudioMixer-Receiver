@@ -1,0 +1,15 @@
+# node
+node_modules/
+
+# sass
+.sass-cache/
+
+# build
+build/
+
+# bower
+bower_components/
+
+# IntelliJ
+*.iml
+.idea/

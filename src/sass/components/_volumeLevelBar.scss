@@ -1,0 +1,38 @@
+@import '../common/import';
+
+[volume-level-bar] {
+  width: 80px;
+  margin-left: 4px;
+  display: inline-block;
+  height: 4px;
+  position: relative;
+
+  .backgroundBar {
+    background: rgb(200,200,200);
+    display: inline-block;
+    width: 100%;
+    left: 0;
+  }
+
+  .barSegment {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .greenBar {
+    left: 0%;
+    background: $green;
+  }
+
+  .yellowBar {
+    left: 60%;
+    background: $yellow;
+  }
+
+  .redBar {
+    left: 80%;
+    background: $red;
+  }
+}
